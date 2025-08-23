@@ -366,6 +366,25 @@ a {
     margin: 0 1em;
 }
 
+/* Estilo para el enlace en la esquina inferior derecha */
+.corner-link {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background: #e50914;
+    color: #fff;
+    padding: 0.7em 1.2em;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background 0.2s;
+}
+.corner-link:hover {
+    background: #b00610;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .perfil-container h1 {
