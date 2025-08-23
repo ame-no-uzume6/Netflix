@@ -1,0 +1,407 @@
+/* Colores de Netflix */
+:root {
+    --netflix-red: #e50914;
+    --netflix-dark: #141414;
+    --netflix-black: #000;
+    --netflix-gray: #808080;
+    --netflix-light-gray: #fff;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--netflix-black);
+    color: var(--netflix-light-gray);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--netflix-light-gray);
+    text-decoration: none;
+}
+
+/* --- Página de inicio (index.html) --- */
+.logo {
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.perfil-container h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.perfiles {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+}
+
+.perfil p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--netflix-gray);
+}
+
+.perfil:hover img {
+    border-color: var(--netflix-light-gray);
+}
+
+.perfil:hover p {
+    color: var(--netflix-light-gray);
+}
+
+.gestion-perfiles {
+    margin-top: 3rem;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--netflix-gray);
+    border: 1px solid var(--netflix-gray);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.gestion-perfiles:hover {
+    background-color: var(--netflix-gray);
+    color: var(--netflix-light-gray);
+}
+
+
+/* --- Página de películas (peliculas.html) --- */
+.pelicula-page {
+    background-color: var(--netflix-dark);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-logo {
+    height: 30px;
+}
+
+.navbar nav a {
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+    color: var(--netflix-gray);
+}
+
+.navbar input {
+    padding: 5px 10px;
+    border: 1px solid var(--netflix-gray);
+    background: transparent;
+    color: var(--netflix-light-gray);
+    border-radius: 3px;
+}
+
+.banner {
+    height: 40vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url(https://picsum.photos/1920/1080?random=11) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.contenido-principal {
+    padding: 20px 50px;
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.seccion-peliculas {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pelicula-item {
+    width: 250px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.pelicula-item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.pelicula-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pelicula-titulo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--netflix-black);
+    margin-top: 50px;
+}
+
+/* --- Páginas de presentación (historia, problema, solucion) --- */
+.header-presentacion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-presentacion h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.atras-btn {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 1px solid var(--netflix-light-gray);
+    border-radius: 5px;
+}
+
+.atras-btn:hover {
+    background-color: var(--netflix-light-gray);
+    color: var(--netflix-black);
+}
+
+/* Estilo para el timeline */
+.historia-page {
+    padding: 40px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--netflix-red);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--netflix-red);
+    border: 2px solid var(--netflix-light-gray);
+    border-radius: 50%;
+    top: 30px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -7.5px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -7.5px;
+}
+
+.timeline-content {
+    background-color: var(--netflix-dark);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilos para Problema y Solución */
+.contenido-problema, .contenido-solucion {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+}
+
+.problema-seccion, .solucion-seccion {
+    background-color: var(--netflix-dark);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.problema-seccion h2, .solucion-seccion h2 {
+    font-size: 2rem;
+    color: var(--netflix-red);
+    border-bottom: 2px solid var(--netflix-red);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.problema-seccion img, .solucion-seccion img {
+    width: 100%;
+    height: 60vh;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrusel-item {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.carrusel-item.active {
+    display: flex;
+}
+.carrusel-btn {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 1em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .perfil-container h1 {
+        font-size: 2rem;
+    }
+    .perfiles {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .perfil img {
+        width: 100px;
+        height: 100px;
+    }
+    .perfil p {
+        font-size: 1rem;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-right {
+        margin-top: 10px;
+    }
+    .seccion-peliculas {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+    }
+    .timeline-dot {
+        left: 12px !important;
+    }
+}
