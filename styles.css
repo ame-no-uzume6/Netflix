@@ -141,7 +141,7 @@ a {
 
 .banner {
     height: 40vh;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url(https://picsum.photos/1920/1080?random=11) no-repeat center center/cover;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), url(./assets/historia.jpg) no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
