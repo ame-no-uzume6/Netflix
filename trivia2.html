@@ -13,33 +13,34 @@
     <div class="trivia">
         <form>
             <div class="pregunta">
-                <p>¿Cuál fue la solución clave que permitió a Netflix superar el riesgo de obsolescencia?</p>
-                <button type="button" onclick="verificarTrivia2('a')">a) Mejorar el envío de DVDs</button>
+                <p>¿Cuál fue la solución clave que permitió a Netflix superar el riesgo de obsolescencia y migrar al Streaming?</p>
+                <button type="button" onclick="verificarTrivia2('a')">a) Mejorar el marketing</button>
                 <button type="button" onclick="verificarTrivia2('b')">b) Invertir en tiendas físicas</button>
-                <button type="button" onclick="verificarTrivia2('c')">c) Adoptar el streaming de video</button>
-                <button type="button" onclick="verificarTrivia2('d')">d) Vender la empresa</button>
+                <button type="button" onclick="verificarTrivia2('c')">c) Uso estratégico del análisis de datos</button>
+                <button type="button" onclick="verificarTrivia2('d')">d) Vender la marca</button>
             </div>
         </form>
     </div>
-    <div id="modal-respuesta" class="modal" style="display:none;">
+    <div id="modal-respuesta" class="modal">
         <div class="modal-content">
-            <span id="modal-mensaje"></span>
+            <span id="modal-mensaje">¡Respuesta correcta!</span>
             <button onclick="cerrarModal()">Cerrar</button>
         </div>
     </div>
+    <a href="solucion.html" class="corner-link">Siguiente &rarr;</a>
     <script>
     function verificarTrivia2(respuesta) {
         let correcto = respuesta === 'c';
-        mostrarModal(correcto);
+        if(correcto){
+            mostrarModal()
+        }
     }
-    function mostrarModal(correcto) {
+    function mostrarModal() {
         const modal = document.getElementById('modal-respuesta');
-        const mensaje = document.getElementById('modal-mensaje');
-        mensaje.textContent = correcto ? '¡Respuesta correcta!' : 'Respuesta incorrecta. Intenta de nuevo.';
-        modal.style.display = 'block';
+        modal.classList.add('show');
     }
     function cerrarModal() {
-        document.getElementById('modal-respuesta').style.display = 'none';
+        document.getElementById('modal-respuesta').classList.remove('show');
     }
     </script>
 </body>
