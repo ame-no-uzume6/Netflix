@@ -386,6 +386,52 @@ a {
     background: #b00610;
 }
 
+/* Modal estilos */
+.modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.modal.show {
+    display: flex;
+}
+.modal-content {
+    background: #106006;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 250px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.trivia {
+    margin: 2em auto;
+    max-width: 600px;
+    background: #222;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 10px;
+}
+.trivia button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.trivia button:hover {
+    background: #b00610;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .perfil-container h1 {

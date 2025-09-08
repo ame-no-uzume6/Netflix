@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia 2 - Solución al problema</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trivia-page">
+    <header class="header-presentacion">
+        <a href="solucion.html" class="atras-btn">&larr; Volver</a>
+        <h1>Trivia 2: Solución al problema</h1>
+    </header>
+    <div class="trivia">
+        <form>
+            <div class="pregunta">
+                <p>¿Cuál fue la solución clave que permitió a Netflix superar el riesgo de obsolescencia?</p>
+                <button type="button" onclick="verificarTrivia2('a')">a) Mejorar el envío de DVDs</button>
+                <button type="button" onclick="verificarTrivia2('b')">b) Invertir en tiendas físicas</button>
+                <button type="button" onclick="verificarTrivia2('c')">c) Adoptar el streaming de video</button>
+                <button type="button" onclick="verificarTrivia2('d')">d) Vender la empresa</button>
+            </div>
+        </form>
+    </div>
+    <div id="modal-respuesta" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span id="modal-mensaje"></span>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <script>
+    function verificarTrivia2(respuesta) {
+        let correcto = respuesta === 'c';
+        mostrarModal(correcto);
+    }
+    function mostrarModal(correcto) {
+        const modal = document.getElementById('modal-respuesta');
+        const mensaje = document.getElementById('modal-mensaje');
+        mensaje.textContent = correcto ? '¡Respuesta correcta!' : 'Respuesta incorrecta. Intenta de nuevo.';
+        modal.style.display = 'block';
+    }
+    function cerrarModal() {
+        document.getElementById('modal-respuesta').style.display = 'none';
+    }
+    </script>
+</body>
+</html>

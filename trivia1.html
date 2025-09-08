@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia 1 - Historia de Netflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="trivia-page">
+    <header class="header-presentacion">
+        <a href="historia.html" class="atras-btn">&larr; Volver</a>
+        <h1>Trivia 1: Historia de Netflix</h1>
+    </header>
+    <div class="trivia">
+        <form>
+            <div class="pregunta">
+                <p>1. ¿En qué año se fundó Netflix?</p>
+                <button type="button" onclick="verificarTrivia1(1, 'a')">a) 1997</button>
+                <button type="button" onclick="verificarTrivia1(1, 'b')">b) 2001</button>
+                <button type="button" onclick="verificarTrivia1(1, 'c')">c) 2010</button>
+            </div>
+            <div class="pregunta">
+                <p>2. ¿Cuál era el principal negocio de Netflix al inicio?</p>
+                <button type="button" onclick="verificarTrivia1(2, 'a')">a) Streaming</button>
+                <button type="button" onclick="verificarTrivia1(2, 'b')">b) Alquiler de DVD</button>
+                <button type="button" onclick="verificarTrivia1(2, 'c')">c) Producción de series</button>
+            </div>
+            <div class="pregunta">
+                <p>3. ¿Qué empresa fue la mayor competencia de Netflix en sus inicios?</p>
+                <button type="button" onclick="verificarTrivia1(3, 'a')">a) Amazon</button>
+                <button type="button" onclick="verificarTrivia1(3, 'b')">b) Blockbuster</button>
+                <button type="button" onclick="verificarTrivia1(3, 'c')">c) Disney</button>
+            </div>
+        </form>
+    </div>
+    <div id="modal-respuesta" class="modal">
+        <div class="modal-content">
+            <div>¡Respuesta correcta!</div>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+    <a href="problema.html" class="corner-link">Siguiente &rarr;</a>
+    <script>
+    function verificarTrivia1(pregunta, respuesta) {
+        let correcto = false;
+        if (pregunta === 1 && respuesta === 'a') correcto = true;
+        if (pregunta === 2 && respuesta === 'b') correcto = true;
+        if (pregunta === 3 && respuesta === 'b') correcto = true;
+        if (correcto){
+            mostrarModal()
+        }
+    }
+    function mostrarModal() {
+        const modal = document.getElementById('modal-respuesta');
+        modal.classList.add('show');
+    }
+    function cerrarModal() {
+        document.getElementById('modal-respuesta').classList.remove('show');
+    }
+    </script>
+</body>
+</html>
