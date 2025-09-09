@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Herramientas de Software</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cartas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .carta {
+            background: #222;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+            width: 50%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid #e50914;
+        }
+        .carta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px #e50914a0;
+            border-color: #fff;
+        }
+        .carta-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 8px #e50914a0;
+        }
+        .carta-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
+            color: #e50914;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .carta-desc {
+            font-size: 1rem;
+            text-align: center;
+            color: #fff;
+            opacity: 0.85;
+        }
+        @media (max-width: 700px) {
+            .cartas-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+                padding: 1rem;
+            }
+            .carta {
+                width: 90vw;
+                min-width: 0;
+            }
+            .atras-btn {
+                left: 1rem;
+                top: 1rem;
+                font-size: 1rem;
+                padding: 0.4em 1em;
+            }
+        }
+    </style>
+</head>
+<body class="herramientas-page">
+    <header class="header-presentacion">
+        <a href="peliculas.html" class="atras-btn">&larr; Volver</a>
+        <h1>Herramientas de Software</h1>
+    </header>
+    <div class="cartas-container">
+        <div class="carta">
+            <div class="carta-icon">💻</div>
+            <div class="carta-title">Lenguajes de programación</div>
+            <div class="carta-desc">Python, Pandas, Numpy y Scala</div>
+        </div>
+        <div class="carta">
+            <div class="carta-icon">🗄️</div>
+            <div class="carta-title">Big Data y procesamiento</div>
+            <div class="carta-desc">Apache Hadoop, Spark y Kafka</div>
+        </div>
+        <div class="carta">
+            <div class="carta-icon">🗃️</div>
+            <div class="carta-title">Bases de datos</div>
+            <div class="carta-desc">Cassandra, MySQL, Redis y Memcached</div>
+        </div>
+        <div class="carta">
+            <div class="carta-icon">🤖</div>
+            <div class="carta-title">Aprendizaje automático (Machine Learning)</div>
+            <div class="carta-desc">Metaflow</div>
+        </div>
+        <div class="carta">
+            <div class="carta-icon">📊</div>
+            <div class="carta-title">Visualización y Business Intelligence (BI)</div>
+            <div class="carta-desc">Tableau, Power BI y matplotlib</div>
+        </div>
+    </div>
+    <a href="fin.html" class="corner-link">Siguiente &rarr;</a>
+    <footer class="footer">
+        <p>© 2025 Netflix, Inc.</p>
+    </footer>
+</body>
+</html>
